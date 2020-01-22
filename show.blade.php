@@ -202,10 +202,10 @@
             <div class="content">
                 <div class="row">
 
-                    <form method="get" class="col-md-4" action="{{route("teacher.show",'test')}}">
+                    <form method="get" class="col-md-4" action="{{route("student.show",'test')}}">
                         
                          @csrf
-                          <label style="font-family:georgia;color:Red  ">Check Teacher</label><br>
+                          <label style="font-family:georgia;color:Red  ">Check Student</label><br>
                         <div class="form-group">
                              
                             <input class="col-md-8" type="text" class="form-control" name="show" placeholder="Enter User Code">
@@ -213,22 +213,22 @@
                         </div>
                        
 
-                    @foreach ($teacher as $teacher)
+                    @foreach ($student as $student)
                     
                        <ol class="list-group">
                            <label style="font-family:georgia;color:green">Image</label>
-                            <li class="list-group-item"> <img src="{{asset('uploads/ima/'.$teacher->image)}}" width="300px;" height="250px;" alt="image" ></li>
+                            <li class="list-group-item"> <img src="{{asset('uploads/ima/'.$student->image)}}" width="250px;" height="250px;" alt="image" ></li>
                           <br>
                             <label style="font-family:georgia;color:green">Full Name</label>
-                            <li style="font-family:georgia;color:blue" class="list-group-item">{{$teacher->fullname}}</li>
+                            <li style="font-family:georgia;color:blue" class="list-group-item">{{$student->fullname}}</li>
                             <label style="font-family:georgia;color:green">Id Number</label>
-                            <li  style="font-family:georgia;color:blue"  class="list-group-item">{{$teacher->idnumber}}</li>
+                            <li  style="font-family:georgia;color:blue"  class="list-group-item">{{$student->idnumber}}</li>
                             <label style="font-family:georgia;color:green">Serial Number</label>
-                            <li style="font-family:georgia;color:blue"  class="list-group-item">{{$teacher->serialnumber}}</li>
+                            <li style="font-family:georgia;color:blue"  class="list-group-item">{{$student->serialnumber}}</li>
                             <label style="font-family:georgia;color:green">Mark</label>
-                            <li style="font-family:georgia;color:blue"  class="list-group-item">{{$teacher->mark}}</li>
+                            <li style="font-family:georgia;color:blue"  class="list-group-item">{{$student->mark}}</li>
                             <label style="font-family:georgia;color:green">Date</label>
-                            <li style="font-family:georgia;color:blue"  class="list-group-item">{{$teacher->date}}</li>
+                            <li style="font-family:georgia;color:blue"  class="list-group-item">{{$student->date}}</li>
                             
                            
                         </ul>
